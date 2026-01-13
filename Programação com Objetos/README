@@ -1,0 +1,20 @@
+Este projeto consiste numa aplicação em Java que simula a gestão de um hotel para animais.
+No hotel existem animais de várias espécies, habitats onde os animais vivem, 
+árvores que influenciam a manutenção dos habitats, funcionários responsáveis pelos cuidados 
+e vacinas que podem ser administradas aos animais.
+O objetivo principal da aplicação é gerir toda esta informação e calcular o nível de satisfação 
+dos animais e dos funcionários.
+
+#Funcionalidades
+
+-Registar e gerir animais, espécies, habitats, árvores, funcionários e vacinas
+
+-Vacinar animais e manter o histórico do seu estado de saúde
+
+-Calcular a satisfação dos animais, tendo em conta o habitat e os outros animais
+
+-Calcular a satisfação dos funcionários, de acordo com o trabalho que lhes é atribuído
+
+-Avançar as estações do ano, afetando o estado das árvores
+
+-Guardar e carregar o estado da aplicação

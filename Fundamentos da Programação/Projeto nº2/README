@@ -1,0 +1,40 @@
+# Projeto – Go
+# ==============================================
+
+# Contexto
+# --------
+# Projeto desenvolvido no âmbito da unidade curricular
+# Fundamentos da Programação (IST, 2023/2024).
+
+# Descrição do Problema
+# --------------------
+# Este projeto consiste no desenvolvimento de um conjunto de funções em Python
+# para modelar e manipular estruturas de dados abstratas, seguindo rigorosamente
+# a especificação fornecida no enunciado.
+#
+# O objetivo principal é implementar operações sobre entidades do domínio do
+# problema, garantindo a correção lógica, a validação de argumentos e o respeito
+# pelos tipos de dados definidos.
+
+# Solução
+# -------
+# A solução baseia-se numa abordagem modular e funcional, onde cada função tem
+# uma responsabilidade bem definida.
+#
+# São utilizadas abstrações de dados, validações sistemáticas e composição de
+# funções para resolver problemas de maior complexidade a partir de operações
+# simples, conforme os princípios abordados na disciplina.
+
+# Input / Output
+# --------------
+# Input:
+# - Argumentos fornecidos às funções, respeitando os tipos e formatos definidos
+#   no enunciado
+#
+# Output:
+# - Valores calculados ou estruturas de dados resultantes das operações,
+#   de acordo com o comportamento especificado para cada função
+
+# Linguagem
+# ---------
+# Python

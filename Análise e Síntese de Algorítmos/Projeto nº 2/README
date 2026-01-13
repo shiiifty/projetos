@@ -1,0 +1,35 @@
+# Projeto 2 – Metro Connectivity
+
+## Contexto
+Projeto desenvolvido no âmbito da unidade curricular  
+**Análise e Síntese de Algoritmos** (IST, 2024/2025).
+
+## Descrição do Problema
+Dada uma rede de metro modelada como um multigrafo não dirigido,
+em que os vértices representam estações e as arestas representam
+ligações pertencentes a linhas específicas, o objetivo é calcular
+o índice de conectividade da rede.
+
+Este índice corresponde ao número máximo de mudanças mínimas
+de linha necessárias para viajar entre quaisquer duas estações
+da rede. Caso existam estações sem ligação entre si, o resultado
+deverá ser `-1`.
+
+## Solução
+O problema é resolvido através de algoritmos de grafos,
+modelando adequadamente as mudanças de linha e calculando,
+para todos os pares de estações, o número mínimo de mudanças
+necessárias. O valor máximo dessas mudanças define o índice
+de conectividade da rede.
+
+A solução é implementada de forma iterativa, garantindo
+eficiência em tempo e memória para os limites máximos do problema.
+
+## Input / Output
+- **Input**: número de estações, número de ligações, número de linhas
+  e lista de ligações entre estações com a respetiva linha
+- **Output**: inteiro correspondente ao índice de conectividade da
+  rede de metro (`0`, `-1` ou valor positivo)
+
+## Linguagem
+C++

@@ -1,0 +1,17 @@
+Project - Group 16
+
+
+To compile the project type "make" in the terminal
+
+
+Firstly run ./ES [-p ESport] [-v], 
+where: 
+ESport is the well-known port where the ES server accepts requests, both in UDP and TCP. 
+This is an optional argument. If omitted, it assumes the value 58000+GN, where GN is the number of the group.
+
+Then run ./user [-n ESIP] [-p ESport], 
+where: 
+ESIP is the IP address of the machine where the Event Reservation Server (ES) runs. 
+This is an optional argument. If this argument is omitted, the ES should be running on the same machine. 
+ESport is the well-known port (TCP and UDP) where the ES accepts requests. This is an optional argument. 
+If omitted, it assumes the value 58000+GN, where GN is the group number.

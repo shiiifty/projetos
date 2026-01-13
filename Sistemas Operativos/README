@@ -1,0 +1,50 @@
+#IST-KVS — Projeto de Sistemas Operativos (2024/2025)
+
+Implementação de um Key-Value Store (IST-KVS) com suporte a clientes concorrentes, 
+subscrições de chaves, notificações assíncronas e terminação de sessões via sinais, 
+utilizando named pipes (FIFOs), threads e mecanismos de sincronização.
+
+#Funcionalidades
+
+-Servidor IST-KVS autónomo
+
+-Comunicação cliente-servidor via named pipes (FIFOs)
+
+-Suporte a múltiplas sessões concorrentes
+
+-Subscrição e remoção de subscrição de chaves
+
+-Notificações assíncronas quando valores são alterados ou removidos
+
+-Processamento concorrente de ficheiros .job
+
+-Encerramento de sessões através do sinal SIGUSR1
+
+-API de cliente em C
+
+#Arquitetura
+#Servidor
+
+-Pipe de registo para aceitar novos clientes
+
+-Uma tarefa anfitriã responsável por aceitar pedidos de ligação
+
+-S tarefas gestoras, cada uma associada a um cliente
+
+-Threads adicionais para processar ficheiros .job
+
+#Cliente
+
+Cria três FIFOs por sessão:
+
+-FIFO de pedidos
+
+-FIFO de respostas
+
+-FIFO de notificações
+
+Utiliza duas threads:
+
+-Thread principal: envio de pedidos e receção de respostas
+
+-Thread de notificações: receção de atualizações do servidor

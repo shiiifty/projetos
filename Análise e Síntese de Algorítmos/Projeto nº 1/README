@@ -1,0 +1,24 @@
+# Projeto 1 – Parentização de Operadores
+
+## Contexto
+Projeto desenvolvido no âmbito da unidade curricular
+**Análise e Síntese de Algoritmos** (IST, 2024/2025).
+
+## Descrição do Problema
+Dada uma operação binária definida por tabela e uma sequência
+de inteiros, o objetivo é determinar se existe uma forma de
+parentetizar a expressão de modo a obter um valor final desejado.
+
+## Solução
+O problema é resolvido recorrendo a programação dinâmica,
+avaliando todas as subexpressões possíveis e guardando os
+resultados intermédios para evitar recomputações.
+
+## Input / Output
+- **Input**: dimensão do conjunto, tabela da operação, sequência
+  de inteiros e resultado esperado
+- **Output**: indicação se a parentização é possível e, em caso
+  afirmativo, a parentização mais à esquerda
+
+## Linguagem
+C++

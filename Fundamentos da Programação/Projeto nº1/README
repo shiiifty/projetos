@@ -1,0 +1,47 @@
+# Projeto – Territórios e Montanhas
+# ================================
+
+# Contexto
+# --------
+# Projeto desenvolvido no âmbito da unidade curricular
+# Fundamentos da Programação (IST, 2023/2024).
+
+# Descrição do Problema
+# --------------------
+# O projeto consiste na análise de um território representado por uma grelha,
+# modelada como um tuplo de tuplos contendo valores 0 e 1.
+#
+# Cada posição da grelha representa uma interseção do território:
+# - 1 corresponde a uma montanha
+# - 0 corresponde a uma interseção livre
+#
+# O objetivo é disponibilizar funções que permitam explorar o território,
+# identificar montanhas, cadeias de montanhas e vales, bem como obter
+# informação global sobre a estrutura do território.
+
+# Solução
+# -------
+# A solução é composta por várias funções em Python que operam sobre o
+# território e interseções, permitindo:
+# - Validar territórios e interseções
+# - Determinar interseções adjacentes
+# - Identificar cadeias de montanhas
+# - Determinar os vales associados a uma cadeia
+# - Verificar conectividade entre interseções
+# - Calcular métricas globais sobre o território
+#
+# A abordagem seguida é funcional e utiliza estruturas de dados imutáveis,
+# de acordo com os requisitos do enunciado.
+
+# Input / Output
+# --------------
+# Input:
+# - Território representado por um tuplo de tuplos com valores 0 e 1
+#
+# Output:
+# - Valores lógicos, numéricos ou representações textuais do território,
+#   dependendo da função utilizada.
+
+# Linguagem
+# ---------
+# Python

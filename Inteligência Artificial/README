@@ -1,0 +1,41 @@
+# Projeto – NURUOMINO
+
+## Contexto
+Projeto desenvolvido no âmbito da unidade curricular  
+**Inteligência Artificial** (IST, 2024/2025).
+
+## Descrição do Problema
+O NURUOMINO é um puzzle lógico definido numa grelha quadrada
+dividida em várias regiões. Em cada região deve ser colocado
+exatamente um tetraminó (L, I, T ou S), respeitando as seguintes
+regras:
+
+- Cada região contém um único tetraminó
+- Tetraminós iguais não podem ser ortogonalmente adjacentes
+  (considerando rotações e reflexões como iguais)
+- As células preenchidas devem formar uma única região conexa
+- Não podem existir sub-regiões preenchidas de tamanho 2×2
+
+Assume-se que cada instância do puzzle tem uma solução única.
+
+## Solução
+O problema é modelado como um **problema de procura em espaço
+de estados**, utilizando técnicas clássicas de Inteligência
+Artificial. Cada estado representa uma configuração parcial do
+tabuleiro, e cada ação corresponde à colocação válida de um
+tetraminó numa região ainda não preenchida.
+
+A resolução é efetuada recorrendo aos algoritmos de procura
+(como procura em profundidade, procura gananciosa ou
+A*), sendo utilizada uma heurística para orientar as procuras
+informadas e melhorar o desempenho.
+
+## Input / Output
+- **Input**: grelha quadrada onde cada célula indica o identificador
+  da região a que pertence
+- **Output**: grelha resolvida, indicando em cada célula a peça
+  atribuída à respetiva região, no formato especificado no
+  enunciado
+
+## Linguagem
+Python

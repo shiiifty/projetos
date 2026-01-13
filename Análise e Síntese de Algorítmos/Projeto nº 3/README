@@ -1,0 +1,40 @@
+# Projeto 3 – Distribuição de Brinquedos de Natal
+
+## Contexto
+Projeto desenvolvido no âmbito da unidade curricular  
+**Análise e Síntese de Algoritmos** (IST, 2024/2025).
+
+## Descrição do Problema
+Dado um conjunto de fábricas distribuídas por vários países,
+cada uma com um stock limitado de brinquedos, e um conjunto
+de crianças espalhadas pelo mundo com pedidos específicos,
+o objetivo é determinar a melhor distribuição possível de
+brinquedos.
+
+Cada criança pode receber, no máximo, um brinquedo, devendo
+ser respeitadas restrições de exportação máxima e de número
+mínimo de brinquedos a entregar por país. Pretende-se
+maximizar o número de crianças cujos pedidos são satisfeitos.
+Caso não seja possível cumprir todas as restrições, o
+resultado deverá ser `-1`.
+
+## Solução
+O problema é modelado como um problema de **Programação Linear**,
+sendo resolvido através da biblioteca **PuLP**. São definidas
+variáveis de decisão que representam a atribuição de brinquedos
+a crianças, bem como restrições associadas aos stocks das
+fábricas, aos limites de exportação e aos mínimos de distribuição
+por país.
+
+A função objetivo maximiza o número total de crianças com
+pedidos satisfeitos, garantindo simultaneamente o cumprimento
+de todas as restrições impostas.
+
+## Input / Output
+- **Input**: número de fábricas, países e crianças, informação
+  sobre fábricas e países, e lista de pedidos das crianças
+- **Output**: número máximo de crianças cujos pedidos podem ser
+  satisfeitos ou `-1` caso as restrições não possam ser cumpridas
+
+## Linguagem
+Python
