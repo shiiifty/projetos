@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <title>STOP! - Jogo</title>
+        <link rel="stylesheet" href="../css/style-create-room.css">
+        <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="main-box">
+            <div class="logo-container">
+                <div class="logo-rays logo-rays-top">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <h1 class="logo-text">STOP!</h1>
+
+                <div class="logo-rays logo-rays-bottom">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="content-row">
+                <div class="left-panel">
+                    <img src="../img/public.png" class="imagem-public">
+                    <p class="public-party">Public</p>
+                    <button class="public-go" id="public-btn">GO!</button>
+                </div>
+                <div class="right-panel">
+                    <img src="../img/private.png" class="imagem-private">
+                    <p class="private-party">Private</p>
+                    <button class="private-go" id="private-btn">GO!</button>
+                </div>
+            </div>
+            <a href="../index.html" class="voltar-menu">Voltar ao Menu</a> 
+        </div>  
+        <div id="config-overlay" class="config-overlay hidden">
+            <div class="config-modal">
+                <h2 class="config-title">Configurar Jogo</h2>
+
+                <label class="config-label">
+                    Tempo por ronda:
+                    <select id="config-time" class="config-select">
+                        <option value="30">30 segundos</option>
+                        <option value="60" selected>60 segundos</option>
+                        <option value="90">90 segundos</option>
+                    </select>
+                </label>
+
+                <label class="config-label">
+                    Letras a excluir:
+                    <input
+                        type="text"
+                        id="config-letters"
+                        class="config-input"
+                        placeholder="Ex: ABCDE (vazio = todas as letras)"
+                    >
+                </label>
+                <label class="config-label">
+                    Número de rondas:
+                    <select id="config-rounds" class="config-rounds">
+                        <option value="5">5 rondas</option>
+                        <option value="10" selected>10 rondas</option>
+                        <option value="15">15 rondas</option>
+                    </select>
+                </label>
+
+                <div class="config-buttons">
+                    <button type="button" id="config-cancel" class="config-btn cancel">
+                        Cancelar
+                    </button>
+                    <button type="button" id="config-start" class="config-btn confirm">
+                        Continuar
+                    </button>
+                </div>
+            </div>
+        </div> 
+        <div id="popup-overlay" class="popup-overlay">
+            <div class="popup-box">
+
+                <button id="close-popup" class="popup-close">✕</button>
+
+                <h2 class="popup-title">Private room</h2>
+
+                <div class="senha-texto">
+                <p class="senha">Type in a 4-digit password</p>
+
+                <input type="password" id="senha-input" class="senha-input" placeholder="Senha">
+
+                <p id="wrong-pw-msg" class="wrong-password">
+                    The password needs to be a 4-digit number!
+                </p>
+
+                <button id="confirm-popup" class="popup-confirm">Continuar</button>
+                </div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../js/online-client.js"></script>
+        <script src="../js/create-room.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>STOP! - Jogo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="logo-row">
+        <div class="logo-container">
+          <div class="logo-rays logo-rays-top">
+            <span></span><span></span><span></span>
+          </div>
+
+          <h1 class="logo-text">STOP!</h1>
+
+          <div class="logo-rays logo-rays-bottom">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="left-panel">
+          <div class="avatar-wrapper">
+            <div class="avatar-circle">
+              <img id="avatar-img" src="avatars/avatar1.png" alt="Avatar">
+            </div>
+
+            <button type="button" class="avatar-change-btn" id="avatar-change-btn">
+              🔁
+            </button>
+          </div>
+          <input type="text" class="text-input" placeholder="Nickname" id="text-input">
+        </div>
+
+        <div class="right-panel">
+          <button class="menu-button" id="play-btn">PLAY</button>
+          <button class="menu-button" id="create-room-btn">CREATE ROOM</button>
+          <button class="menu-button" id="settings-btn">SETTINGS</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

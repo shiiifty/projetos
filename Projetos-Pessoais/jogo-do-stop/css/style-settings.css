@@ -1,0 +1,130 @@
+body {
+    background-color: #C77DFF;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.main-box {
+  width: 90%;
+  max-width: 1200px;
+
+  max-height: calc(100vh - 20px);
+
+  aspect-ratio: 16/9;
+  background: #4169E1;
+  border-radius: 24px;
+  box-shadow: 0px 20px 40px rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-text {
+  font-size: 64px;
+  font-family: 'Luckiest Guy', cursive;
+  color: #FFD426;
+  text-shadow: 0 6px 0 black,
+            0 0 10px rgba(0,0,0,0.4);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.maintenance {
+    font-size: 64px;
+    font-family: 'Luckiest Guy', cursive;
+    color: #FFD426;
+    text-shadow: 0 6px 0 black,
+                0 0 10px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.under-maintenance-img {
+    width: 20%;
+}
+
+.voltar-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 260px;
+  height: 40px;
+  border-radius: 999px;
+  border: 2px solid #1b1b1b;
+  background: #FFD426;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0,0,0,0.35);
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  color: black;
+  margin-bottom: 25px;
+}
+
+
+.voltar-menu:hover {
+    background: #ffe97a;
+}
+
+.voltar-menu:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 rgba(0,0,0,0.35);
+}
+
+.logo-rays {
+  position: relative;
+  width: 140px;
+  height: 40px;
+}
+
+.logo-rays-top {
+  margin-bottom: -60px;
+}
+
+.logo-rays-bottom {
+  margin-top: 10px;
+}
+
+.logo-rays span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 18px;
+  background: #ffffff;
+  border-radius: 999px;
+  transform-origin: center -20px;
+}
+
+.logo-rays-bottom span:nth-child(1) { transform: translate(-50%, -50%) rotate(0deg); }
+.logo-rays-bottom span:nth-child(2) { transform: translate(-50%, -50%) rotate(60deg); }
+.logo-rays-bottom span:nth-child(3) { transform: translate(-50%, -50%) rotate(-60deg); }
+.logo-rays-top span:nth-child(1) { transform: translate(-50%, -50%) rotate(180deg); }
+.logo-rays-top span:nth-child(2) { transform: translate(-50%, -50%) rotate(-120deg); }
+.logo-rays-top span:nth-child(3) { transform: translate(-50%, -50%) rotate(120deg); }

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>STOP! - Jogo</title>
+
+    <link rel="stylesheet" href="../css/style-gameOnline.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="logo-row">
+        <div class="logo-container">
+          <div class="logo-rays logo-rays-top">
+            <span></span><span></span><span></span>
+          </div>
+
+          <h1 class="logo-text">STOP!</h1>
+
+          <div class="logo-rays logo-rays-bottom">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="left-panel">
+            <div class="top-info">
+                <p class="info-label">Jogador: <span id="nickname-span"></span></p>
+
+                <p class="info-label">Letra:
+                  <span id="letter-span" class="big-letter">-</span>
+                </p>
+
+                <p class="info-label">Tempo:
+                  <span id="timer-span" class="big-timer">60</span>s
+                </p>
+                <p class="info-label">Ronda:
+                  <span id="round-span">0/10</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="inputs-grid">
+            <label>
+              Nome:
+              <input type="text" class="answer-input" data-category="nomes">
+            </label>
+            <label>
+              Animal:
+              <input type="text" class="answer-input" data-category="animais">
+            </label>
+            <label>
+              Cidade
+              <input type="text" class="answer-input" data-category="cidades">
+            </label>
+            <label>
+              País:
+              <input type="text" class="answer-input" data-category="paises">
+            </label>
+            <label>
+              Objeto:
+              <input type="text" class="answer-input" data-category="objetos">
+            </label>
+            <label>
+              Peça de roupa:
+              <input type="text" class="answer-input" data-category="pecas_de_roupa">
+            </label>
+            <label>
+              Marca:
+              <input type="text" class="answer-input" data-category="marcas">
+            </label>
+            <label>
+              Cor:
+              <input type="text" class="answer-input" data-category="cores">
+            </label>
+            <label>
+              Comida:
+              <input type="text" class="answer-input" data-category="comidas">
+            </label>
+            <label>
+              Parte do corpo:
+              <input type="text" class="answer-input" data-category="corpo">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-buttons">
+          <button type="button" id="stop-btn" class="menu-button stop-btn">STOP</button>
+      </div>
+      <div>
+        <p id="incorrect-stop" class="hidden">Preenche todos os campos antes de clicares no STOP!</p>
+      </div>
+    </div>
+    <div id="compare-overlay" class="overlay hidden">
+      <div class="overlay-card">
+        <div class="overlay-header">
+          <div>
+            <h2 id="compare-title">Comparação da ronda</h2>
+            <div id="compare-subtitle" class="muted"></div>
+          </div>
+
+        </div>
+
+        <div class="overlay-controls">
+          <button id="compare-prev" class="btn">◀ Anterior</button>
+          <button id="compare-pause" class="btn">⏸ Pause</button>
+          <button id="compare-next" class="btn">Próximo ▶</button>
+
+          <div class="spacer"></div>
+
+          <div class="timerpill">
+            Próxima em <span id="compare-countdown">5</span>s
+          </div>
+        </div>
+
+        <div id="compare-category-title" class="category-title">Categoria</div>
+
+        <div id="compare-table" class="compare-table"></div>
+
+        <div class="overlay-footer">
+          <div class="muted">
+            Dica: podes navegar manualmente ou deixar avançar sozinho.
+          </div>
+        </div>
+        <button id="compare-next-round" class="btn">Próxima ronda</button>
+        <div id="compare-ready" class="muted"></div>
+      </div>
+    </div>
+    <div id="results-overlay" class="overlay hidden">
+      <div class="overlay-card">
+        <div id="results-table" class="results-table"></div>
+        <div>
+          <button id="close-btn" class="close-btn">Fechar</button>
+          <button id="play-again-btn" class="play-again-btn">Jogar de novo</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+    window.socket = io("http://localhost:3000", {
+        transports: ["websocket", "polling"]
+    });
+    </script>
+    <script src="../js/online-client.js"></script>
+    <script src="../js/words.js"></script>
+    <script src="../js/play.js"></script>
+  </body>
+</html>

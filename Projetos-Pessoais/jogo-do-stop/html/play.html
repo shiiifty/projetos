@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+    <meta charset="UTF-8">
+    <title>STOP! - Jogo</title>
+    <link rel="stylesheet" href="../css/style-play.css">
+     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="main-box">
+            <div class="logo-container">
+                <div class="logo-rays logo-rays-top">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <h1 class="logo-text">STOP!</h1>
+
+                <div class="logo-rays logo-rays-bottom">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="content-row">
+                <div class="left-panel">
+                    <img src="../img/online.webp" class="imagem-online">
+                    <p class="online-party">Online</p>
+                    <button class="online-go" id="online-btn" type="button">GO!</button>
+                </div>
+                <div class="right-panel">
+                    <img src="../img/offline.png" class="imagem-offline">
+                    <p class="offline-party">Offline</p>
+                    <button class="offline-go" id="offline-btn" type="button">GO!</button>
+                </div>
+            </div>
+            <a href="../index.html" class="voltar-menu">Voltar ao Menu</a> 
+        </div> 
+        <div id="config-overlay" class="config-overlay">
+            <div class="config-modal">
+                <h2 class="config-title">Configurar Jogo</h2>
+
+                <label class="config-label">
+                    Tempo por ronda:
+                    <select id="config-time" class="config-select">
+                        <option value="30">30 segundos</option>
+                        <option value="60" selected>60 segundos</option>
+                        <option value="90">90 segundos</option>
+                    </select>
+                </label>
+
+                <label class="config-label">
+                    Letras a excluir:
+                    <input
+                        type="text"
+                        id="config-letters"
+                        class="config-input"
+                        placeholder="Ex: ABCDE (vazio = todas as letras)"
+                    >
+                </label>
+                <label class="config-label">
+                    Número de rondas:
+                    <select id="config-rounds" class="config-rounds">
+                        <option value="5">5 rondas</option>
+                        <option value="10" selected>10 rondas</option>
+                        <option value="15">15 rondas</option>
+                    </select>
+                </label>
+
+                <div class="config-buttons">
+                <button type="button" id="config-cancel" class="config-btn cancel">
+                    Cancelar
+                </button>
+                <button type="button" id="config-start" class="config-btn confirm">
+                    Começar
+                </button>
+                </div>
+            </div>
+        </div> 
+        <div id="join-modal" class="join-overlay hidden">
+            <div class="join-card" role="dialog" aria-modal="true">
+                <h2 class="join-title">ENTRAR NUMA SALA</h2>
+
+                <label class="join-label">CÓDIGO DA SALA:</label>
+                <input id="join-room-id" class="join-input" type="text" maxlength="10" placeholder="Ex: ABC123" />
+
+                <div id="pw-block" class="hidden">
+                    <label class="join-label">PASSWORD:</label>
+                    <input id="join-room-pw" class="join-input" type="password" placeholder="Password da sala" />
+                    <p id="pw-error" class="join-error hidden">Password errada.</p>
+                </div>
+
+                <p id="join-error" class="join-error hidden"></p>
+
+                <div class="join-actions">
+                    <button id="join-cancel" type="button" class="join-btn join-btn-cancel">CANCELAR</button>
+                    <button id="join-submit" type="button" class="join-btn join-btn-confirm">ENTRAR</button>
+                    <button id="available-rooms" type="button" class="hidden">VER SALAS DISPONÍVEIS</button>
+                </div>
+            </div>
+        </div>
+        <div id="all-rooms-overlay" class="all-rooms-overlay hidden">
+            <div class="modal">
+                <div class="modal-header">
+                <h2>Salas públicas</h2>
+                <button id="all-rooms-close">✕</button>
+                </div>
+
+                <div id="rooms-loading" class="hidden">A carregar...</div>
+                <div id="rooms-empty" class="hidden">Não há salas públicas abertas.</div>
+
+                <div id="rooms-list" class="rooms-list"></div>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../js/online-client.js"></script>
+        <script src="../js/script.js"></script>
+
+    </body>
+</html>
+    

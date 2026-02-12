@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8">
+    <title>STOP! - Jogo</title>
+
+    <link rel="stylesheet" href="../css/style-game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="logo-row">
+        <div class="logo-container">
+          <div class="logo-rays logo-rays-top">
+            <span></span><span></span><span></span>
+          </div>
+
+          <h1 class="logo-text">STOP!</h1>
+
+          <div class="logo-rays logo-rays-bottom">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-row">
+        <div class="left-panel">
+            <div class="top-info">
+                <p class="info-label">Jogador: <span id="nickname-span"></span></p>
+
+                <p class="info-label">Letra:
+                  <span id="letter-span" class="big-letter">-</span>
+                </p>
+
+                <p class="info-label">Tempo:
+                  <span id="timer-span" class="big-timer">60</span>s
+                </p>
+                <p class="info-label">Ronda:
+                  <span id="round-span">0/10</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="right-panel">
+          <div class="inputs-grid">
+            <label>
+              Nome:
+              <input type="text" class="answer-input" data-category="nomes">
+            </label>
+            <label>
+              Animal:
+              <input type="text" class="answer-input" data-category="animais">
+            </label>
+            <label>
+              Cidade
+              <input type="text" class="answer-input" data-category="cidades">
+            </label>
+            <label>
+              País:
+              <input type="text" class="answer-input" data-category="paises">
+            </label>
+            <label>
+              Objeto:
+              <input type="text" class="answer-input" data-category="objetos">
+            </label>
+            <label>
+              Peça de roupa:
+              <input type="text" class="answer-input" data-category="pecas_de_roupa">
+            </label>
+            <label>
+              Marca:
+              <input type="text" class="answer-input" data-category="marcas">
+            </label>
+            <label>
+              Cor:
+              <input type="text" class="answer-input" data-category="cores">
+            </label>
+            <label>
+              Comida:
+              <input type="text" class="answer-input" data-category="comidas">
+            </label>
+            <label>
+              Parte do corpo:
+              <input type="text" class="answer-input" data-category="corpo">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-buttons">
+            <button type="button" id="start-btn" class="menu-button start-btn">START</button>
+            <button type="button" id="stop-btn" class="menu-button stop-btn">STOP</button>
+        </div>
+    </div>
+    <div id="score-overlay" class="score-overlay">
+      <div class="score-modal">
+        <h2>Resultados da ronda</h2>
+        <p class="score-main">
+          Pontuação: <span id="score-value">0</span> pontos
+        </p>
+        <p>
+          Respostas válidas: 
+          <span id="valid-count">0</span> /
+          <span id="total-count">0</span>
+        </p>
+        <p class="ptc-total">
+          Pontuação total:
+          <span id="total-score">0</span> pontos
+        </p>
+
+        <div class="score-buttons">
+          <button id="close-score-btn">Fechar</button>
+        </div>
+      </div>
+    </div>
+    <div id="end-transition">
+      <div class="message">FIM DO JOGO!</div>
+    </div>
+
+    <script src="../js/words.js"></script>
+    <script src="../js/play.js"></script>
+  </body>
+</html>

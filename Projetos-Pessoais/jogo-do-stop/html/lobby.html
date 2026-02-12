@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <title>Lobby</title>
+        <link rel="stylesheet" href="../css/style-lobby.css">
+    </head>
+    <body>
+        <div class="lobby-container">
+            <h1 class="sala-criada-txt">Sala criada!</h1>
+
+            <div class="room-info">
+                <p class="room-code-label">
+                    Código da sala:
+                    <span id="room-code" class="room-code"></span>
+                </p>
+
+                <p id="room-password-line" class="room-password hidden">
+                    Password da sala:
+                    <span id="room-password" class="hidden"></span>
+                </p>
+            </div>
+
+
+            <p class="hint">
+                Partilha este código com os teus amigos
+            </p>
+
+            <h2>Jogadores</h2>
+            <ul id="players-list"></ul>
+
+            <p id="host-info"></p>
+
+            <button id="start-game-btn">START GAME</button>
+        </div>
+        <div id="start-modal" class="modal hidden">
+            <div class="modal-card">
+                <h2>O jogo vai começar!</h2>
+                <p>Prepara-te…</p>
+                <div id="countdown" class="countdown">5</div>
+            </div>
+        </div>
+
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../js/online-client.js"></script>
+        <script src="../js/lobby.js"></script>
+    </body>
+</html>
